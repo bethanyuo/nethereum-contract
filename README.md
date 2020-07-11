@@ -4,11 +4,44 @@ Use Nethereum .NET integration library for Ethereum, thus simplifying the access
 ## Requirements
 [Visual Studio Community 2019](https://visualstudio.microsoft.com/vs/)
 * Project Type: C# .NET Core Console Application
-* .NET Framework 4.7.2
+* [.NET Framework 4.7.2](https://dotnet.microsoft.com/download)
 
 ## NuGetPackages
 * Nethereum.Contracts
 * Nethereum.Web3
+
+## Terminal Setup
+Run this command to initialize a new project in your project directory:
+```sh
+dotnet new console
+```
+You will end up with a file called Program.cs that looks like this:
+```cs
+using System;
+
+namespace nethereumProject
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
+```
+Use this to install NuGet Package Manager for the iMAC:
+
+Go to the `[Extensions]` icon on the left and look for `NuGet Package Manager`. 
+
+1. Click on View -> Command Palette
+2. In the search bar, search for Nethereum.
+3. You should see Nethereum Add.
+4. Select that.
+5. Enter Nethereum in the search bar again.
+6. Select Nethereum.Contracts and select the latest.
+7. Repeat steps 3 through 5.
+8. Select Nethereum.Web3
 
 ## Implementing the Contract
 Import the required namespaces in order to use Nethereum’s Web3 libraries.
@@ -34,7 +67,7 @@ Then, deploy the contract using `Injected Web3` while taking note of the address
 
 Because the contract owner can only add facts to this contract, export and copy the private key of the account that deployed the contract. Don’t forget to prepend `0x` to the private key.
 
-## Smart Contract Interaction: Writing to the Smart Contract
+## Writing to the Smart Contract
 Return to the ContractService class. Create a method which takes a string as an argument (a fact) and adds it to the contract. We will send an _asynchronous_ transaction - `method.SendTransactionAsync(from, gas, value, functionInput)` and it will not wait to be mined, just get the transaction hash.
  
 In the main function, call the asynchronous method. Then, press `[Start]`.
@@ -48,7 +81,7 @@ Check the transaction hash in in Ropsten Etherscan to confirm if the transaction
  
 Try adding a fact using another private key as an account. Hypothesize on what could happen and test it: _RESULT: `FAIL`_
  
-## Smart Contract Interaction: Reading from the Smart Contract
+## Reading from the Smart Contract
 When reading from a Smart Contract, no wallets or private keys are needed. 
 In the `ContractService` class, create a method which gets a fact by a given `index` and returns a string with the fact. Get the method of the contract and then make an _asynchronous_ call with the index as parameter, which will return `Task<string>` and get the result.
 
