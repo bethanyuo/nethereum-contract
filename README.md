@@ -10,7 +10,7 @@ Use Nethereum .NET integration library for Ethereum, thus simplifying the access
 * Nethereum.Contracts
 * Nethereum.Web3
 
-## Terminal Setup
+## Project Set-up
 Run this command to initialize a new project in your project directory:
 ```sh
 $ dotnet new console
