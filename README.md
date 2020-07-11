@@ -13,7 +13,7 @@ Use Nethereum .NET integration library for Ethereum, thus simplifying the access
 ## Terminal Setup
 Run this command to initialize a new project in your project directory:
 ```sh
-dotnet new console
+$ dotnet new console
 ```
 You will end up with a file called Program.cs that looks like this:
 ```cs
