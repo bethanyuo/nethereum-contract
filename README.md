@@ -50,7 +50,7 @@ Try adding a fact using another private key as an account. Hypothesize on what c
  
 ## Smart Contract Interaction: Reading from the Smart Contract
 When reading from a Smart Contract, no wallets or private keys are needed. 
-In the `ContractService` class, create a method which gets a fact by a given `index` and returns a string with the fact. Get the method of the contract and then make an _asynchronous_ call with the index as parameter, which will return Task<string> and get the result.
+In the `ContractService` class, create a method which gets a fact by a given `index` and returns a string with the fact. Get the method of the contract and then make an _asynchronous_ call with the index as parameter, which will return `Task<string>` and get the result.
 
 Run the program:
 ```
@@ -58,7 +58,7 @@ Fact 1: The Times 03/Jan/2009 Chancellor on brink of second bailout for banks
 Press Any Key To Exit...
 ```
  
-Finally, create a method, which gets how many facts are stored in the contract:
+Finally, create a method which gets `how many facts` are stored in the contract.
 
 Run the program:
 ```
