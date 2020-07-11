@@ -1,4 +1,4 @@
-# Playing with Smart Contracts using Nethereum
+# Smart Contracts using Nethereum
 Use Nethereum .NET integration library for Ethereum, thus simplifying the access and smart contract interaction with Ethereum nodes. The exercise will show how to interact with an already deployed contract on the Ethereum Ropsten Testnet.
 
 ## Requirements
